@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleaning Services | Bluenose Cleaning Pros</title>
+  <meta name="description" content="Explore residential, commercial, Airbnb turnover, deep cleaning, and move-in/move-out cleaning services from Bluenose Cleaning Pros.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bg-white/95 backdrop-blur sticky top-0 z-50 nav-shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="blue-vintage-ship.png" alt="Bluenose Cleaning Pros logo" class="h-12 w-auto" onerror="this.style.display='none'">
+          <div>
+            <div class="text-xl font-extrabold text-slate-900">Bluenose Cleaning Pros</div>
+            <div class="text-xs tracking-[0.2em] uppercase text-slate-500">Halifax Cleaning Services</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link active-link" href="services.html">Services</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a href="contact.html" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-3 rounded-xl font-semibold transition">Get a Free Quote</a>
+        </nav>
+        <button class="md:hidden text-slate-700" onclick="toggleMobileMenu()" aria-label="Open menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-2 text-sm font-medium">
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="index.html">Home</a>
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="about.html">About</a>
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="services.html">Services</a>
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero py-24 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="badge !bg-white/10 !text-white mb-5">Cleaning Services</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-5">Professional services tailored to homes, businesses, and short-term rentals.</h1>
+      <p class="text-lg text-sky-50 max-w-3xl mx-auto">Each service section gives your visitors a clearer understanding of what you offer and when to contact you.</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div id="residential" class="bg-slate-50 rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-lg">
+        <div class="grid lg:grid-cols-[1fr_0.6fr] gap-10">
+          <div>
+            <h2 class="text-3xl font-extrabold mb-4">Residential Cleaning</h2>
+            <p class="text-slate-600 text-lg mb-6">Ideal for busy households that want a clean, comfortable home without the stress of doing it all themselves.</p>
+            <ul class="check-list space-y-3 text-slate-700">
+              <li>Kitchen, bathroom, and living area cleaning</li>
+              <li>Dusting, vacuuming, mopping, and surface wipe-downs</li>
+              <li>Weekly, bi-weekly, monthly, or one-time visits</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="font-bold text-slate-900 mb-4">Best for</div>
+            <p class="text-slate-600">Families, professionals, seniors, renters, and homeowners needing recurring upkeep or a fresh reset.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="commercial" class="bg-slate-50 rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-lg">
+        <div class="grid lg:grid-cols-[1fr_0.6fr] gap-10">
+          <div>
+            <h2 class="text-3xl font-extrabold mb-4">Commercial Cleaning</h2>
+            <p class="text-slate-600 text-lg mb-6">Keep your workplace clean, presentable, and ready for staff and customers.</p>
+            <ul class="check-list space-y-3 text-slate-700">
+              <li>Office spaces, lobbies, restrooms, and shared areas</li>
+              <li>Scheduled cleaning for daily, weekly, or custom routines</li>
+              <li>Professional presentation for visitors and teams</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="font-bold text-slate-900 mb-4">Best for</div>
+            <p class="text-slate-600">Offices, clinics, retail spaces, and service businesses that want a more polished environment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="airbnb" class="bg-slate-50 rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-lg">
+        <div class="grid lg:grid-cols-[1fr_0.6fr] gap-10">
+          <div>
+            <h2 class="text-3xl font-extrabold mb-4">Airbnb & Rental Turnovers</h2>
+            <p class="text-slate-600 text-lg mb-6">Fast and consistent turnover cleaning to help hosts maintain strong guest experiences.</p>
+            <ul class="check-list space-y-3 text-slate-700">
+              <li>Quick turnaround between bookings</li>
+              <li>Guest-ready presentation and staging appearance</li>
+              <li>Linen refresh and restocking support if needed</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="font-bold text-slate-900 mb-4">Best for</div>
+            <p class="text-slate-600">Airbnb hosts, short-term rentals, furnished suites, and property managers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="deep-cleaning" class="bg-slate-50 rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-lg">
+        <div class="grid lg:grid-cols-[1fr_0.6fr] gap-10">
+          <div>
+            <h2 class="text-3xl font-extrabold mb-4">Deep Cleaning</h2>
+            <p class="text-slate-600 text-lg mb-6">A more detailed service for spaces that need extra attention, seasonal refreshes, or first-time service.</p>
+            <ul class="check-list space-y-3 text-slate-700">
+              <li>Detailed attention to high-touch and neglected areas</li>
+              <li>Ideal before events, after busy seasons, or for first visits</li>
+              <li>Great add-on before moving in or listing a property</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="font-bold text-slate-900 mb-4">Best for</div>
+            <p class="text-slate-600">Spring cleaning, move preparation, post-renovation cleanup, and occasional reset services.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="move" class="bg-slate-50 rounded-3xl border border-slate-200 p-8 lg:p-10 shadow-lg">
+        <div class="grid lg:grid-cols-[1fr_0.6fr] gap-10">
+          <div>
+            <h2 class="text-3xl font-extrabold mb-4">Move-In / Move-Out Cleaning</h2>
+            <p class="text-slate-600 text-lg mb-6">Get a property ready for handover, new tenants, or a fresh start in your new space.</p>
+            <ul class="check-list space-y-3 text-slate-700">
+              <li>Empty-space cleaning for better access and detail</li>
+              <li>Ideal for landlords, tenants, and home sellers</li>
+              <li>Helps properties feel fresh, clean, and ready</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="font-bold text-slate-900 mb-4">Best for</div>
+            <p class="text-slate-600">Tenants, landlords, realtors, and homeowners preparing for possession or listing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip py-16 text-white text-center">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold mb-4">Need a custom quote for your property?</h2>
+      <p class="text-lg text-sky-50 mb-8">The new contact form lets you collect service type, property type, and appointment details in one place.</p>
+      <a href="contact.html" class="bg-white text-sky-700 hover:bg-slate-100 px-6 py-3.5 rounded-xl font-semibold">Request a Quote</a>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="text-white text-xl font-extrabold mb-3">Bluenose Cleaning Pros</div>
+        <p class="text-slate-400">Reliable cleaning for residential, commercial, and rental properties.</p>
+      </div>
+      <div>
+        <div class="text-white font-bold mb-3">Pages</div>
+        <div class="space-y-2 text-sm">
+          <a class="footer-link block" href="index.html">Home</a>
+          <a class="footer-link block" href="about.html">About</a>
+          <a class="footer-link block" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="text-white font-bold mb-3">Contact</div>
+        <div class="space-y-2 text-sm text-slate-400">
+          <div>Halifax, Nova Scotia</div>
+          <div><a href="tel:+19024487344">+1 (902) 448-7344</a></div>
+          <div><a href="mailto:akankshasingh@bluenosecleaningpros.ca">akankshasingh@bluenosecleaningpros.ca</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 text-center text-sm py-5 text-slate-500">© <span id="current-year"></span> Bluenose Cleaning Pros. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

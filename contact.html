@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Bluenose Cleaning Pros</title>
+  <meta name="description" content="Contact Bluenose Cleaning Pros for a residential, commercial, or Airbnb cleaning quote in Halifax and nearby areas.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bg-white/95 backdrop-blur sticky top-0 z-50 nav-shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="blue-vintage-ship.png" alt="Bluenose Cleaning Pros logo" class="h-12 w-auto" onerror="this.style.display='none'">
+          <div>
+            <div class="text-xl font-extrabold text-slate-900">Bluenose Cleaning Pros</div>
+            <div class="text-xs tracking-[0.2em] uppercase text-slate-500">Halifax Cleaning Services</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="services.html">Services</a>
+          <a class="nav-link active-link" href="contact.html">Contact</a>
+          <a href="contact.html" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-3 rounded-xl font-semibold transition">Get a Free Quote</a>
+        </nav>
+        <button class="md:hidden text-slate-700" onclick="toggleMobileMenu()" aria-label="Open menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-4 space-y-2 text-sm font-medium">
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="index.html">Home</a>
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="about.html">About</a>
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="services.html">Services</a>
+        <a onclick="closeMobileMenu()" class="block px-2 py-2" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero py-24 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="badge !bg-white/10 !text-white mb-5">Contact & Quote Requests</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-5">Request your cleaning quote.</h1>
+      <p class="text-lg text-sky-50 max-w-3xl mx-auto">This page gives your customers a dedicated place to contact you, choose a service, and send property details.</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start">
+      <div class="space-y-6">
+        <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200 shadow-lg">
+          <div class="text-sm uppercase tracking-[0.2em] text-sky-700 font-bold mb-3">Contact details</div>
+          <div class="space-y-4 text-slate-700">
+            <div><span class="font-semibold">Phone:</span> <a href="tel:+19024487344">+1 (902) 448-7344</a></div>
+            <div><span class="font-semibold">Email:</span> <a href="mailto:akankshasingh@bluenosecleaningpros.ca">akankshasingh@bluenosecleaningpros.ca</a></div>
+            <div><span class="font-semibold">Service Area:</span> Halifax, Dartmouth, Bedford, and nearby areas</div>
+          </div>
+        </div>
+        <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200 shadow-lg">
+          <div class="text-sm uppercase tracking-[0.2em] text-sky-700 font-bold mb-3">Perfect inquiries for this form</div>
+          <ul class="check-list space-y-3 text-slate-700">
+            <li>Residential recurring cleaning</li>
+            <li>Office or commercial requests</li>
+            <li>Airbnb turnovers and rental cleans</li>
+            <li>Deep cleaning or move-related projects</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-2xl">
+        <div class="mb-8">
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Send us your details</h2>
+          <p class="text-slate-600">This form uses your existing Formspree action and collects more helpful details for quoting.</p>
+        </div>
+        <form id="quote-form" action="https://formspree.io/f/xovlorew" method="POST" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="name">Full Name</label>
+              <input class="input-field" type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="email">Email Address</label>
+              <input class="input-field" type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="phone">Phone Number</label>
+              <input class="input-field" type="tel" id="phone" name="phone">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="service">Service Needed</label>
+              <select class="select-field" id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Residential Cleaning</option>
+                <option>Commercial Cleaning</option>
+                <option>Airbnb Turnover Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>Move-In / Move-Out Cleaning</option>
+                <option>Custom Cleaning Request</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="property-type">Property Type</label>
+              <select class="select-field" id="property-type" name="property_type">
+                <option value="">Select property type</option>
+                <option>House</option>
+                <option>Apartment / Condo</option>
+                <option>Office</option>
+                <option>Retail Space</option>
+                <option>Airbnb / Short-Term Rental</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-slate-700 mb-2" for="frequency">Cleaning Frequency</label>
+              <select class="select-field" id="frequency" name="frequency">
+                <option value="">Select frequency</option>
+                <option>One-Time</option>
+                <option>Weekly</option>
+                <option>Bi-Weekly</option>
+                <option>Monthly</option>
+                <option>As Needed</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2" for="address">Service Address or Area</label>
+            <input class="input-field" type="text" id="address" name="address" placeholder="Example: Bedford, Halifax, Dartmouth">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-2" for="message">Tell us about the job</label>
+            <textarea class="textarea-field min-h-[160px]" id="message" name="message" placeholder="Tell us the size of the property, preferred day, number of bathrooms/bedrooms, or anything else helpful." required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New website quote request - Bluenose Cleaning Pros">
+          <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-4 rounded-2xl transition">Submit Quote Request</button>
+          <p id="submit-hint" class="text-sm text-slate-500">After submission, Formspree will process the request.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="text-white text-xl font-extrabold mb-3">Bluenose Cleaning Pros</div>
+        <p class="text-slate-400">Professional cleaning services for homes, businesses, and rental properties.</p>
+      </div>
+      <div>
+        <div class="text-white font-bold mb-3">Pages</div>
+        <div class="space-y-2 text-sm">
+          <a class="footer-link block" href="index.html">Home</a>
+          <a class="footer-link block" href="about.html">About</a>
+          <a class="footer-link block" href="services.html">Services</a>
+        </div>
+      </div>
+      <div>
+        <div class="text-white font-bold mb-3">Contact</div>
+        <div class="space-y-2 text-sm text-slate-400">
+          <div>Halifax, Nova Scotia</div>
+          <div><a href="tel:+19024487344">+1 (902) 448-7344</a></div>
+          <div><a href="mailto:akankshasingh@bluenosecleaningpros.ca">akankshasingh@bluenosecleaningpros.ca</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 text-center text-sm py-5 text-slate-500">© <span id="current-year"></span> Bluenose Cleaning Pros. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
