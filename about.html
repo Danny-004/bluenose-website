@@ -18,17 +18,23 @@
                 <span class="font-black text-slate-900 text-xl">Bluenose</span>
             </a>
             <div class="hidden md:flex gap-8">
-                <a href="/" class="text-sm font-bold text-slate-600">Home</a>
-                <a href="services" class="text-sm font-bold text-slate-600">Services</a>
-                <a href="contact" class="bg-sky-600 text-white px-6 py-2 rounded-full text-xs font-black">QUOTE</a>
+                <a href="/" class="text-sm font-bold text-slate-600 hover:text-sky-600 transition-colors">Home</a>
+                <a href="services" class="text-sm font-bold text-slate-600 hover:text-sky-600 transition-colors">Services</a>
+                <a href="contact" class="bg-sky-600 text-white px-6 py-2 rounded-full text-xs font-black shadow-lg hover:bg-sky-700 transition-all">QUOTE</a>
             </div>
-            <div class="md:hidden"><button onclick="toggleMenu()" class="text-slate-900"><svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></button></div>
+            <div class="md:hidden">
+                <button onclick="toggleMenu()" class="text-slate-900">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div id="mobileMenu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-100 z-50">
+        <div id="mobileMenu" class="hidden absolute top-20 left-0 w-full bg-white border-b border-slate-100 z-50 shadow-xl">
             <div class="px-4 py-6 space-y-4 font-bold text-slate-700">
-                <a href="/" class="block">Home</a>
-                <a href="services" class="block">Services</a>
-                <a href="contact" class="block text-sky-600">Get a Quote</a>
+                <a href="/" class="block px-4 py-2 hover:bg-slate-50 rounded-xl">Home</a>
+                <a href="services" class="block px-4 py-2 hover:bg-slate-50 rounded-xl">Services</a>
+                <a href="contact" class="block px-4 py-3 text-center bg-sky-600 text-white rounded-xl">Get a Quote</a>
             </div>
         </div>
     </nav>
@@ -37,29 +43,99 @@
         <div class="max-w-7xl mx-auto text-center">
             <span class="inline-block px-4 py-1.5 rounded-full bg-sky-50 text-sky-700 text-[10px] font-black mb-6 uppercase tracking-widest">Our Story</span>
             <h1 class="text-5xl lg:text-7xl font-black text-slate-900 mb-8">From Bedford, <br><span class="text-sky-600">For Nova Scotia.</span></h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">We didn't start Bluenose Cleaning Pros to just "clean." We started it to bring professional-grade reliability and local accountability back to the HRM.</p>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                We didn't start Bluenose Cleaning Pros to just "clean." We started it to bring professional-grade reliability and local accountability back to the Halifax Regional Municipality.
+            </p>
         </div>
     </section>
 
     <section class="py-20 bg-slate-50 px-4">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <img src="TQkXm.jpg" alt="Team" class="rounded-[3rem] shadow-2xl border-8 border-white">
+            <div class="relative">
+                <img src="TQkXm.jpg" alt="Our Founders" class="rounded-[3rem] shadow-2xl border-8 border-white">
+                <div class="absolute -bottom-6 -right-6 bg-sky-600 p-8 rounded-3xl text-white shadow-xl hidden md:block">
+                    <div class="text-3xl font-black italic">100%</div>
+                    <div class="text-xs uppercase font-bold tracking-widest">Locally Owned</div>
+                </div>
+            </div>
             <div>
                 <h2 class="text-3xl font-black text-slate-900 mb-6 italic">The Maritime Promise</h2>
-                <p class="text-slate-600 mb-6 leading-relaxed">We noticed a frustrating trend in Halifax: no-shows. We built Bluenose on the values of hard work and transparency. We show up on time, every time.</p>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    A few years ago, we noticed a frustrating trend in the HRM: **no-shows.** Homeowners in Bedford and professionals in Halifax were tired of booking cleaners who either didn't show up or didn't care about the details.
+                </p>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    We built **Bluenose Cleaning Pros** on a simple value: We show up on time, we bring our own eco-friendly supplies, and we don't leave until your home is perfect. If it's not, we're back within 24 hours to fix it.
+                </p>
                 <div class="grid grid-cols-2 gap-6">
-                    <div class="border-l-4 border-sky-600 pl-4"><div class="text-2xl font-black text-slate-900">100%</div><div class="text-xs text-slate-400 font-bold uppercase">Local</div></div>
-                    <div class="border-l-4 border-sky-600 pl-4"><div class="text-2xl font-black text-slate-900">4.9/5</div><div class="text-xs text-slate-400 font-bold uppercase">Rating</div></div>
+                    <div class="border-l-4 border-sky-600 pl-4">
+                        <div class="text-2xl font-black text-slate-900">500+</div>
+                        <div class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Homes Cleaned</div>
+                    </div>
+                    <div class="border-l-4 border-sky-600 pl-4">
+                        <div class="text-2xl font-black text-slate-900">4.9/5</div>
+                        <div class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Google Rating</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="py-24 bg-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-slate-900">Our Three Anchors</h2>
+                <p class="text-slate-500 mt-2 italic">The values that keep us grounded.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:border-sky-500 transition-all group">
+                    <div class="text-4xl mb-6 text-sky-600">⚓</div>
+                    <h3 class="text-xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Reliability</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">We respect your time. Our team arrives within 15 minutes of your scheduled window, every single time.</p>
+                </div>
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:border-sky-500 transition-all group">
+                    <div class="text-4xl mb-6 text-sky-600">🧼</div>
+                    <h3 class="text-xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Transparency</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">No hidden fees or "travel surcharges." Our pricing is flat, fair, and confirmed before we touch a sponge.</p>
+                </div>
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:border-sky-500 transition-all group">
+                    <div class="text-4xl mb-6 text-sky-600">🛡️</div>
+                    <h3 class="text-xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Security</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">We are fully bonded, insured, and WCB-compliant. Your home is in the safest hands in Nova Scotia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto bg-sky-600 rounded-[3rem] p-12 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-black mb-4">We Love Your Pets! 🐾</h2>
+                <p class="text-sky-100 text-lg mb-8 max-w-2xl mx-auto">
+                    We use 100% non-toxic, pet-safe cleaning products. Whether you have a Golden Retriever or a tabby cat, your furry family members will be safe and happy when we're finished.
+                </p>
+                <a href="contact" class="inline-block px-10 py-4 bg-white text-sky-600 rounded-xl font-black shadow-xl hover:bg-sky-50 transition-all uppercase text-sm tracking-widest">Book Pet-Safe Clean</a>
+            </div>
+            <div class="absolute -bottom-10 -left-10 text-[15rem] opacity-10 rotate-12 select-none pointer-events-none">⚓</div>
+        </div>
+    </section>
+
     <footer class="bg-slate-900 text-slate-500 py-16 text-center border-t border-slate-800">
-        <p class="text-white font-bold mb-4">Bluenose Cleaning Pros</p>
-        <p class="text-xs">&copy; 2026 Bedford, NS.</p>
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-white font-bold mb-4">Bluenose Cleaning Pros</p>
+            <p class="text-xs">&copy; 2026 Locally Founded in Bedford, NS.</p>
+            <div class="mt-6 flex justify-center gap-6 text-[10px] uppercase font-black tracking-widest">
+                <a href="/" class="hover:text-sky-500 transition-colors">Home</a>
+                <a href="services" class="hover:text-sky-500 transition-colors">Services</a>
+                <a href="contact" class="hover:text-sky-500 transition-colors">Contact</a>
+            </div>
+        </div>
     </footer>
 
-    <script>function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }</script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
