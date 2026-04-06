@@ -3,68 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Bluenose Cleaning Pros</title>
+    <title>Get a Quote | Bluenose Cleaning Pros</title>
     <link rel="icon" type="image/png" href="blue-vintage-ship.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-slate-50 font-['Inter']">
 
-    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex items-center gap-3">
-                    <img src="blue-vintage-ship.png" alt="Bluenose Cleaning Pros" class="h-12 w-auto">
-                    <div class="leading-none text-nowrap">
-                        <span class="block text-xl font-extrabold text-slate-900">Bluenose</span>
-                        <span class="text-[10px] uppercase tracking-widest text-sky-600 font-bold">Cleaning Pros</span>
-                    </div>
-                </a>
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="nav-link text-sm font-semibold text-slate-600">Home</a>
-                    <a href="about.html" class="nav-link text-sm font-semibold text-slate-600">About</a>
-                    <a href="services.html" class="nav-link text-sm font-semibold text-slate-600">Services</a>
-                </div>
-            </div>
+    <nav class="bg-white/90 backdrop-blur-md h-20 border-b border-slate-100 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="blue-vintage-ship.png" class="h-10">
+                <span class="font-extrabold text-slate-900">Bluenose</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-sky-600">← Back Home</a>
         </div>
     </nav>
 
-    <section class="py-20 lg:py-32">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h1 class="text-4xl lg:text-6xl font-black text-slate-900 mb-6">Get Your <span class="text-sky-600">Quote.</span></h1>
-                <p class="text-lg text-slate-600">Email us at <span class="font-bold">info@bluenosecleaningpros.com</span> or fill out the form below.</p>
+    <section class="py-16 px-4">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-black text-slate-900 mb-2">Request Your Quote</h1>
+                <p class="text-slate-500">Fast, local, and reliable cleaning in Halifax & Bedford.</p>
             </div>
 
-            <div class="bg-white p-8 lg:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
-                <form action="https://formspree.io/f/xaqllpll" method="POST" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Name</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Your Email Address</label>
-                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 outline-none" placeholder="example@gmail.com">
-                        </div>
+            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100">
+                
+                <div id="step1" class="step-content active">
+                    <h2 class="text-xl font-bold mb-6 text-slate-800 italic">1. What do you need cleaned?</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="service" value="Residential" class="peer hidden" checked>
+                            <div class="p-4 border rounded-2xl text-center font-bold text-slate-500 peer-checked:border-sky-500 peer-checked:text-sky-600 peer-checked:bg-sky-50 transition-all">Home</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="service" value="Commercial" class="peer hidden">
+                            <div class="p-4 border rounded-2xl text-center font-bold text-slate-500 peer-checked:border-sky-500 peer-checked:text-sky-600 peer-checked:bg-sky-50 transition-all">Office</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="service" value="Airbnb" class="peer hidden">
+                            <div class="p-4 border rounded-2xl text-center font-bold text-slate-500 peer-checked:border-sky-500 peer-checked:text-sky-600 peer-checked:bg-sky-50 transition-all">Airbnb</div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="service" value="Post-Construction" class="peer hidden">
+                            <div class="p-4 border rounded-2xl text-center font-bold text-slate-500 peer-checked:border-sky-500 peer-checked:text-sky-600 peer-checked:bg-sky-50 transition-all">Post-Reno</div>
+                        </label>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Service Needed</label>
-                        <select name="service" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200">
-                            <option>Residential Cleaning</option>
-                            <option>Commercial/Office</option>
-                            <option>Move-In / Move-Out</option>
+                    <button type="button" onclick="nextStep(2)" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold shadow-lg shadow-sky-100">Next Step →</button>
+                </div>
+
+                <div id="step2" class="step-content">
+                    <h2 class="text-xl font-bold mb-6 text-slate-800 italic">2. Tell us about the space</h2>
+                    <div class="space-y-4 mb-8">
+                        <input type="text" name="address" placeholder="Service Address (e.g., Bedford Highway)" class="w-full p-4 bg-slate-50 border-none ring-1 ring-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none" required>
+                        <select name="frequency" class="w-full p-4 bg-slate-50 border-none ring-1 ring-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-medium">
+                            <option>One-Time Deep Clean</option>
+                            <option>Weekly Service</option>
+                            <option>Bi-Weekly Service</option>
+                            <option>Monthly Service</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">Message</label>
-                        <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 outline-none"></textarea>
+                    <div class="flex gap-4">
+                        <button type="button" onclick="nextStep(1)" class="w-1/3 py-4 text-slate-400 font-bold">Back</button>
+                        <button type="button" onclick="nextStep(3)" class="w-2/3 py-4 bg-sky-600 text-white rounded-xl font-bold shadow-lg shadow-sky-100">Almost Done →</button>
                     </div>
-                    <button type="submit" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold text-lg hover:bg-sky-700 transition-all">Send Request</button>
-                </form>
-            </div>
+                </div>
+
+                <div id="step3" class="step-content">
+                    <h2 class="text-xl font-bold mb-6 text-slate-800 italic">3. Where should we send the quote?</h2>
+                    <div class="space-y-4 mb-8">
+                        <input type="text" name="name" placeholder="Your Name" class="w-full p-4 bg-slate-50 border-none ring-1 ring-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none" required>
+                        <input type="email" name="email" placeholder="Email Address" class="w-full p-4 bg-slate-50 border-none ring-1 ring-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none" required>
+                    </div>
+                    <div class="flex gap-4">
+                        <button type="button" onclick="nextStep(2)" class="w-1/3 py-4 text-slate-400 font-bold">Back</button>
+                        <button type="submit" class="w-2/3 py-4 bg-slate-900 text-white rounded-xl font-bold shadow-lg shadow-slate-200">Send Request</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 
+    <script>
+        function nextStep(step) {
+            document.querySelectorAll('.step-content').forEach(s => s.classList.remove('active'));
+            document.getElementById('step' + step).classList.add('active');
+        }
+    </script>
 </body>
 </html>
