@@ -3,88 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Instructions | Bluenose Cleaning Pros</title>
+    <title>Secure Payment | Bluenose Cleaning Pros</title>
     <link rel="icon" type="image/png" href="blue-vintage-ship.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         .step-content { display: none; }
         .step-content.active { display: block; }
+        .nav-shadow { box-shadow: 0 2px 15px -3px rgb(0 0 0 / 0.07); }
     </style>
 </head>
 <body class="bg-slate-50 font-['Inter']">
 
-    <nav class="bg-white h-20 flex items-center border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between">
+    <nav class="bg-white/95 backdrop-blur sticky top-0 z-50 nav-shadow h-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="blue-vintage-ship.png" class="h-10" alt="Bluenose Logo">
-                <span class="font-black text-slate-900 uppercase tracking-tighter">Bluenose</span>
+                <div>
+                    <div class="text-lg font-black text-slate-900 leading-none">Bluenose</div>
+                    <div class="text-[8px] uppercase tracking-widest text-sky-600 font-bold">Cleaning Pros</div>
+                </div>
             </a>
-            <a href="index.html" class="text-sm font-bold text-sky-600">← Back Home</a>
+            <a href="index.html" class="text-sm font-bold text-sky-600 hover:text-sky-700 transition-colors">← Back to Home</a>
         </div>
     </nav>
 
     <section class="py-16 px-4">
         <div class="max-w-xl mx-auto">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl font-black text-slate-900 mb-2">Secure Payment</h1>
-                <p class="text-slate-500">Simple, fee-free payment via Interac e-Transfer.</p>
+            <div class="text-center mb-10">
+                <span class="inline-block px-3 py-1 rounded-full bg-sky-50 text-sky-700 text-[10px] font-black uppercase tracking-widest mb-4">Secure Checkout</span>
+                <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Secure Payment</h1>
+                <p class="text-slate-500 text-sm">Follow the steps below to complete your payment via Interac e-Transfer.</p>
             </div>
 
-            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100">
+            <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100">
                 
                 <div id="step1" class="step-content active">
                     <h2 class="text-xl font-bold mb-6 text-slate-800 italic">1. Payment Details</h2>
-                    <div class="space-y-4 mb-8">
+                    <div class="space-y-5 mb-8">
                         <div>
-                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Your Name</label>
-                            <input type="text" id="custName" placeholder="Full Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold">
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Your Full Name</label>
+                            <input type="text" id="custName" placeholder="Enter your name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700 transition-all">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Amount to Pay (CAD)</label>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Amount Due (CAD)</label>
                             <div class="relative">
                                 <span class="absolute left-4 top-4 font-bold text-slate-400">$</span>
-                                <input type="number" id="payAmount" placeholder="0.00" class="w-full p-4 pl-8 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold">
+                                <input type="number" id="payAmount" placeholder="0.00" step="0.01" class="w-full p-4 pl-8 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700 transition-all">
                             </div>
                         </div>
                     </div>
-                    <button type="button" onclick="showInstructions()" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 transition-all shadow-lg">Get Transfer Details →</button>
+                    <button type="button" onclick="showInstructions()" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 transition-all shadow-lg transform active:scale-[0.98]">
+                        Generate Transfer Details →
+                    </button>
                 </div>
 
                 <div id="step2" class="step-content">
-                    <div class="text-center mb-6">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Interac_e-Transfer_logo.svg/1200px-Interac_e-Transfer_logo.svg.png" class="h-12 mx-auto mb-4" alt="Interac">
-                        <h2 class="text-xl font-black text-slate-900">Transfer Instructions</h2>
+                    <div class="text-center mb-8">
+                        <div class="bg-slate-900 inline-block p-4 rounded-2xl mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Interac_e-Transfer_logo.svg/1200px-Interac_e-Transfer_logo.svg.png" class="h-8 mx-auto" alt="Interac">
+                        </div>
+                        <h2 class="text-2xl font-black text-slate-900">Transfer Instructions</h2>
                     </div>
 
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4 mb-8">
-                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
-                            <span class="text-xs font-bold text-slate-400 uppercase">Send To:</span>
-                            <span class="font-bold text-slate-900">akankshasingh@bluenosecleaningpros.ca</span>
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4 mb-8">
+                        <div class="flex flex-col border-b border-slate-200 pb-3">
+                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Send Payment To:</span>
+                            <span class="font-bold text-slate-900 text-sm md:text-base">akankshasingh@bluenosecleaningpros.ca</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-slate-200 pb-3">
-                            <span class="text-xs font-bold text-slate-400 uppercase">Amount:</span>
-                            <span class="font-black text-sky-600 text-xl" id="displayAmount">$0.00</span>
+                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Total Amount:</span>
+                            <span class="font-black text-sky-600 text-2xl" id="displayAmount">$0.00</span>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-slate-400 uppercase">Message/Note:</span>
-                            <span class="font-bold text-slate-900" id="displayNote">Cleaning Service</span>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Message/Reference:</span>
+                            <span class="font-bold text-slate-900 text-sm" id="displayNote">Cleaning Service</span>
                         </div>
                     </div>
 
-                    <div class="text-sm text-slate-600 mb-8 space-y-3">
-                        <p class="flex gap-3"><strong>1.</strong> Log in to your mobile banking app.</p>
-                        <p class="flex gap-3"><strong>2.</strong> Select Interac e-Transfer.</p>
-                        <p class="flex gap-3"><strong>3.</strong> Enter the email and amount shown above.</p>
-                        <p class="flex gap-3 text-sky-600 font-semibold"><span>✓</span> Autodeposit is enabled (No security question needed).</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-sky-100 text-sky-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">1</div>
+                            <p class="text-sm text-slate-600">Open your banking app and select <strong>Interac e-Transfer</strong>.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-sky-100 text-sky-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">2</div>
+                            <p class="text-sm text-slate-600">Enter the email and exact amount shown above.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-emerald-100 text-emerald-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">✓</div>
+                            <p class="text-sm text-emerald-700 font-medium">Autodeposit is enabled. No security question required.</p>
+                        </div>
                     </div>
 
-                    <div class="flex gap-4">
-                        <button type="button" onclick="location.reload()" class="w-1/3 py-4 bg-slate-100 text-slate-600 rounded-xl font-bold">Restart</button>
-                        <a href="index.html" class="w-2/3 py-4 bg-slate-900 text-white rounded-xl font-bold text-center hover:bg-black transition-all">I've Sent the Transfer</a>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="button" onclick="location.reload()" class="w-full sm:w-1/3 py-4 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition-colors">Edit</button>
+                        <a href="index.html" class="w-full sm:w-2/3 py-4 bg-slate-900 text-white rounded-xl font-bold text-center hover:bg-black transition-all shadow-lg">Confirm I've Sent It</a>
                     </div>
                 </div>
             </div>
+            
+            <p class="mt-8 text-center text-slate-400 text-[10px] uppercase tracking-[0.2em]">
+                &copy; 2026 Bluenose Cleaning Pros | Bedford, NS
+            </p>
         </div>
     </section>
 
@@ -94,17 +115,17 @@
             const name = document.getElementById('custName').value;
 
             if(!amount || !name) {
-                alert("Please enter your name and the amount.");
+                alert("Please enter both your name and the amount due.");
                 return;
             }
 
-            document.getElementById('displayAmount').innerText = "$" + amount;
-            document.getElementById('displayNote').innerText = "Cleaning - " + name;
+            document.getElementById('displayAmount').innerText = "$" + parseFloat(amount).toFixed(2);
+            document.getElementById('displayNote').innerText = "Cleaning: " + name;
             
             document.getElementById('step1').classList.remove('active');
             document.getElementById('step2').classList.add('active');
+            window.scrollTo(0, 0);
         }
     </script>
-
 </body>
 </html>
