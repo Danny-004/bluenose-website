@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment | Bluenose Cleaning Pros</title>
+    <link rel="icon" type="image/png" href="blue-vintage-ship.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .step-content { display: none; }
+        .step-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 font-['Inter']">
+
+    <nav class="bg-white h-20 flex items-center border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 w-full flex justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="blue-vintage-ship.png" class="h-10">
+                <span class="font-black text-slate-900 uppercase tracking-tighter">Bluenose</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-sky-600">← Back Home</a>
+        </div>
+    </nav>
+
+    <section class="py-16 px-4">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-black text-slate-900 mb-2">Secure Payment</h1>
+                <p class="text-slate-500">Fast and secure checkout via PayPal or Credit Card.</p>
+            </div>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-slate-100">
+                
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="akankshasingh@bluenosecleaningpros.ca">
+                <input type="hidden" name="currency_code" value="CAD">
+                <input type="hidden" name="no_shipping" value="1">
+                
+                <div id="step1" class="step-content active">
+                    <h2 class="text-xl font-bold mb-6 text-slate-800 italic">1. Invoice Information</h2>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Invoice or Customer Name</label>
+                            <input type="text" name="item_name" placeholder="e.g. #INV-1001 or Your Name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Service Performed</label>
+                            <select name="on0" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700">
+                                <option value="Residential">Residential Cleaning</option>
+                                <option value="Commercial">Commercial Cleaning</option>
+                                <option value="Airbnb">Airbnb Turnover</option>
+                                <option value="Deep Clean">Deep Cleaning</option>
+                                <option value="Move Out">Move-In/Out Cleaning</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Amount to Pay (CAD)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-4 font-bold text-slate-400">$</span>
+                                <input type="number" name="amount" placeholder="0.00" step="0.01" class="w-full p-4 pl-8 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 transition-all shadow-lg flex items-center justify-center gap-2">
+                        Pay with PayPal or Card 
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2L4 5V19L7 22H19L22 19V5L19 2H7ZM17 18H7V6H17V18Z"/></svg>
+                    </button>
+
+                    <div class="mt-6 flex flex-col items-center justify-center gap-4">
+                        <div class="flex gap-3 opacity-60">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-4" alt="PayPal">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-3" alt="Visa">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" class="h-5" alt="Mastercard">
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">🔒 Secure Encryption</span>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="mt-8 text-center text-slate-400 text-xs leading-relaxed">
+                Need to pay via E-Transfer? Please send to:<br>
+                <strong class="text-slate-600">akankshasingh@bluenosecleaningpros.ca</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-400 text-[10px] tracking-widest uppercase">
+        &copy; 2026 Bluenose Cleaning Pros | Bedford & Halifax, NS
+    </footer>
+
+</body>
+</html>
