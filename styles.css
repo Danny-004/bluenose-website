@@ -1,15 +1,11 @@
+/* BASE STYLES */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
-html {
-    scroll-behavior: smooth;
-    font-family: 'Inter', sans-serif;
-}
+html { scroll-behavior: smooth; }
 
-/* Moving Underline Effect */
 .nav-link {
     position: relative;
-    padding-bottom: 4px;
-    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .nav-link::after {
@@ -17,17 +13,40 @@ html {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
-    background-color: #0284c7; /* Sky-600 */
-    transition: width 0.3s ease-in-out;
+    background-color: #0284c7;
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* Ensure the pointer shows up */
-.nav-link:hover {
-    color: #0284c7;
+/* STICKY MOBILE BAR */
+.mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 100;
+    transform: translateY(150%);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (max-width: 768px) {
+    .mobile-cta.visible {
+        display: block;
+        transform: translateY(0);
+    }
+}
+
+/* MULTI-STEP FORM STYLING */
+.step-content { display: none; }
+.step-content.active { display: block; animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
