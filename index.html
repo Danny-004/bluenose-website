@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluenose Cleaning Pros | Premium Cleaning Bedford & Halifax</title>
-    <meta name="description" content="Professional residential and commercial cleaning services in Bedford and Halifax. Locally owned and trusted at bluenosecleaningpros.com">
     <link rel="icon" type="image/png" href="blue-vintage-ship.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-slate-50 font-['Inter']">
+
+    <div id="stickyBar" class="mobile-cta">
+        <a href="contact.html" class="flex items-center justify-between bg-slate-900 text-white p-4 rounded-2xl shadow-2xl border border-slate-700">
+            <span class="font-bold">Ready for a clean home?</span>
+            <span class="bg-sky-600 px-4 py-2 rounded-xl text-xs font-black uppercase">Get Quote</span>
+        </a>
+    </div>
 
     <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,20 +37,16 @@
     </nav>
 
     <section class="relative bg-white pt-20 pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                 <div>
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-sky-50 text-sky-700 text-xs font-bold mb-6 uppercase tracking-widest">#1 Cleaning Service in Bedford</span>
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-sky-50 text-sky-700 text-xs font-bold mb-6 uppercase tracking-widest leading-none">Bedford's Highest Rated</span>
                     <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1]">Expert Cleaning for <span class="text-sky-600">Modern Living.</span></h1>
-                    <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">Premium residential and commercial cleaning across the HRM. Locally owned, fully insured, and trusted at bluenosecleaningpros.com.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="contact.html" class="px-8 py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 shadow-xl shadow-sky-100 transition-all text-center">Schedule a Clean</a>
-                    </div>
+                    <p class="text-lg text-slate-600 mb-10 max-w-xl">Premium residential and commercial cleaning across the HRM. Locally owned, fully insured, and trusted at bluenosecleaningpros.com.</p>
+                    <a href="contact.html" class="inline-block px-8 py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 shadow-xl shadow-sky-100 transition-all">Schedule a Clean</a>
                 </div>
                 <div class="mt-16 lg:mt-0">
-                    <div class="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-                        <img src="pAREc.jpg" alt="Our Professional Cleaning Team" class="w-full h-auto object-cover">
-                    </div>
+                    <img src="pAREc.jpg" alt="Team" class="rounded-[3rem] shadow-2xl border-8 border-white w-full h-auto">
                 </div>
             </div>
         </div>
@@ -53,157 +54,120 @@
 
     <section class="py-12 bg-sky-600">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-8">Get an Instant Estimate</h2>
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl shadow-sky-900/20">
+            <h2 class="text-2xl font-extrabold text-white mb-8">Get an Instant Estimate</h2>
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl">
                 <div class="grid md:grid-cols-3 gap-6 items-center text-left">
                     <div>
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Home Size</label>
-                        <select id="homeSize" onchange="calculatePrice()" class="w-full p-4 rounded-xl bg-slate-50 border-none ring-1 ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700">
-                            <option value="120">1 Bedroom Home</option>
-                            <option value="150">2 Bedroom Home</option>
-                            <option value="190">3 Bedroom Home</option>
-                            <option value="240">4+ Bedroom Home</option>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Home Size</label>
+                        <select id="homeSize" onchange="calculatePrice()" class="w-full p-4 rounded-xl bg-slate-50 border-none ring-1 ring-slate-200 font-bold text-slate-700">
+                            <option value="120">1 Bedroom</option>
+                            <option value="150">2 Bedrooms</option>
+                            <option value="190">3 Bedrooms</option>
+                            <option value="240">4+ Bedrooms</option>
                         </select>
                     </div>
                     <div class="text-center">
-                        <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Estimated Price</label>
-                        <div class="text-4xl font-black text-sky-600">
-                            $<span id="totalPrice">120</span>*
-                        </div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">Estimated Price</label>
+                        <div class="text-4xl font-black text-sky-600">$<span id="totalPrice">120</span>*</div>
                     </div>
-                    <div>
-                        <a href="contact.html" class="block w-full py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg text-center">Book This Price</a>
-                    </div>
+                    <a href="contact.html" class="block w-full py-4 bg-slate-900 text-white rounded-xl font-bold text-center">Book Now</a>
                 </div>
-                <p class="mt-4 text-[10px] text-slate-400 uppercase tracking-widest text-center">*Rough estimate for standard cleaning. Final price confirmed via email.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white overflow-hidden">
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                    <div class="flex gap-1 text-yellow-400 mb-4 text-xl">★★★★★</div>
-                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">What your <span class="text-sky-600">Bedford Neighbors</span> <br>are saying.</h2>
-                </div>
-                <div class="bg-slate-50 px-6 py-3 rounded-full border border-slate-100 flex items-center gap-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Color_Icon.svg" class="h-5 w-5" alt="Google">
-                    <span class="text-sm font-bold text-slate-600 text-nowrap">4.9/5 Rating on Google</span>
-                </div>
-            </div>
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-12">Trusted in <span class="text-sky-600">Nova Scotia.</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 italic text-slate-600 relative">
-                    "The best cleaning service I've used in the West End. They were on time, professional, and my kitchen looks brand new."
-                    <div class="mt-6 not-italic font-bold text-slate-900 text-sm">— Sarah M., Halifax</div>
-                </div>
-                <div class="bg-sky-50 p-8 rounded-[2rem] border border-sky-100 italic text-slate-600 relative">
-                    "Bluenose is a lifesaver for our Airbnb turnover in Bedford. Never missed a clean, and our guests always mention how sparkling it is."
-                    <div class="mt-6 not-italic font-bold text-slate-900 text-sm">— David R., Bedford</div>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 italic text-slate-600 relative">
-                    "Hard to find reliable cleaners lately, but these guys are the real deal. Highly recommend for office cleaning."
-                    <div class="mt-6 not-italic font-bold text-slate-900 text-sm">— Jennifer L., Dartmouth</div>
-                </div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] italic border border-slate-100">"The best kitchen deep-clean I've ever had. Professional and punctual."<div class="mt-4 not-italic font-bold text-sm text-slate-900">— Sarah M., Halifax</div></div>
+                <div class="bg-sky-50 p-8 rounded-[2rem] italic border border-sky-100">"Reliable Airbnb turnovers. Our guests always leave 5-star reviews for cleanliness."<div class="mt-4 not-italic font-bold text-sm text-slate-900">— David R., Bedford</div></div>
+                <div class="bg-slate-50 p-8 rounded-[2rem] italic border border-slate-100">"Excellent office service. It's great to support a local Bedford business."<div class="mt-4 not-italic font-bold text-sm text-slate-900">— Jennifer L.</div></div>
             </div>
         </div>
     </section>
 
     <section class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Our Professional Services</h2>
-                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Tailored cleaning solutions for every environment in the Halifax Regional Municipality.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 flex flex-col h-full transition-all duration-300 hover:border-sky-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-100/50 group">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-16">Expert Solutions</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 hover:border-sky-500 transition-all shadow-sm">
                     <div class="text-3xl mb-4">🏠</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3">Residential</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Weekly or monthly home cleaning tailored to your family's schedule.</p>
-                    <a href="contact.html" class="mt-6 text-sky-600 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Quote <span>→</span></a>
+                    <h3 class="font-bold mb-2">Residential</h3>
+                    <p class="text-xs text-slate-500 mb-4">Tailored weekly or bi-weekly home care.</p>
+                    <a href="contact.html" class="text-sky-600 font-bold text-xs uppercase">Quote →</a>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 flex flex-col h-full transition-all duration-300 hover:border-sky-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-100/50 group">
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 hover:border-sky-500 transition-all shadow-sm">
                     <div class="text-3xl mb-4">🏢</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3">Commercial</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Professional care for offices, retail, and clinics in Bedford and Halifax.</p>
-                    <a href="contact.html" class="mt-6 text-sky-600 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Quote <span>→</span></a>
+                    <h3 class="font-bold mb-2">Commercial</h3>
+                    <p class="text-xs text-slate-500 mb-4">Pristine office & retail environments.</p>
+                    <a href="contact.html" class="text-sky-600 font-bold text-xs uppercase">Quote →</a>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 flex flex-col h-full transition-all duration-300 hover:border-sky-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-100/50 group">
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 hover:border-sky-500 transition-all shadow-sm">
                     <div class="text-3xl mb-4">🔑</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3">Airbnb</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Fast turnovers and laundry service to keep your rental property 5-star ready.</p>
-                    <a href="contact.html" class="mt-6 text-sky-600 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Quote <span>→</span></a>
+                    <h3 class="font-bold mb-2">Airbnb</h3>
+                    <p class="text-xs text-slate-500 mb-4">Fast turnovers & laundry service.</p>
+                    <a href="contact.html" class="text-sky-600 font-bold text-xs uppercase">Quote →</a>
                 </div>
-                <div class="bg-white p-8 rounded-3xl border border-slate-100 flex flex-col h-full transition-all duration-300 hover:border-sky-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-100/50 group">
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 hover:border-sky-500 transition-all shadow-sm">
                     <div class="text-3xl mb-4">🏗️</div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-3">Construction</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed flex-grow">Meticulous post-renovation cleaning to remove all dust and debris.</p>
-                    <a href="contact.html" class="mt-6 text-sky-600 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Quote <span>→</span></a>
+                    <h3 class="font-bold mb-2">Construction</h3>
+                    <p class="text-xs text-slate-500 mb-4">Detailed post-reno dust removal.</p>
+                    <a href="contact.html" class="text-sky-600 font-bold text-xs uppercase">Quote →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-slate-900 text-white rounded-[3rem] mx-4 mb-12 overflow-hidden relative">
+    <section class="py-24 bg-slate-900 text-white rounded-[3rem] mx-4 mb-12 relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
             <div class="relative">
-                <img src="pAREc.jpg" alt="Bluenose Cleaning Team" class="rounded-3xl shadow-2xl border-4 border-slate-800 w-full h-auto">
-                <div class="absolute -bottom-6 -right-6 bg-sky-600 p-6 rounded-2xl shadow-xl">
-                    <div class="text-2xl font-black">100%</div>
-                    <div class="text-[10px] uppercase tracking-widest font-bold">Locally Owned</div>
-                </div>
+                <img src="pAREc.jpg" alt="Team" class="rounded-3xl border-4 border-slate-800">
+                <div class="absolute -bottom-4 -right-4 bg-sky-600 px-6 py-4 rounded-xl font-black italic shadow-xl">LOCAL</div>
             </div>
             <div>
-                <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight">A Message from <br><span class="text-sky-600">The Bluenose Team</span></h2>
-                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
-                    "We aren't just a cleaning company; we're your neighbors. When we started Bluenose Cleaning Pros, we wanted to fix the 'no-show' culture in Nova Scotia's service industry. We promise reliability, honesty, and a level of care that only a local business can provide."
-                </p>
-                <div class="pt-6 border-t border-slate-800">
-                    <div class="text-2xl font-serif italic text-sky-400">The Bluenose Family</div>
-                    <div class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Founded in Bedford, NS</div>
-                </div>
+                <h2 class="text-4xl font-black mb-6">Built for <span class="text-sky-600">Nova Scotia.</span></h2>
+                <p class="text-slate-400 leading-relaxed mb-8">"We promise reliability, honesty, and a level of care that only a local neighbor can provide. No more no-shows."</p>
+                <div class="text-2xl font-serif italic text-sky-400">— The Bluenose Team</div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Service Areas</h2>
-            <p class="text-slate-500 mb-12">Proudly serving the Halifax Regional Municipality and surrounding communities.</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Bedford</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Halifax West End</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Dartmouth</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Sackville</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Hammonds Plains</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Clayton Park</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Rockingham</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Moirs Mill</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">The Ravines</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Downtown Halifax</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Fall River</div>
-                <div class="p-4 bg-slate-50 rounded-2xl text-sm font-bold text-slate-600 border border-transparent hover:border-sky-200 hover:bg-sky-50 transition-all">Timberlea</div>
-            </div>
-            <div class="mt-12 inline-flex items-center gap-2 px-4 py-2 bg-sky-50 text-sky-700 rounded-full text-xs font-black uppercase">
-                📍 Locally Owned & Operated in Bedford, NS
+    <section class="py-20 bg-white text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-xl font-black uppercase tracking-widest mb-12">Service Areas</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-bold text-slate-500">Bedford</span>
+                <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-bold text-slate-500">Halifax</span>
+                <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-bold text-slate-500">Dartmouth</span>
+                <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-bold text-slate-500">Sackville</span>
+                <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-bold text-slate-500">Hammonds Plains</span>
+                <span class="px-4 py-2 bg-slate-50 rounded-full text-xs font-bold text-slate-500">Clayton Park</span>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-300 py-20">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="text-white text-2xl font-bold mb-4">Bluenose Cleaning Pros</div>
-            <p class="mb-6">Serving Bedford & Halifax Regional Municipality.</p>
-            <a href="mailto:info@bluenosecleaningpros.com" class="text-sky-400 font-bold underline">info@bluenosecleaningpros.com</a>
-            <div class="pt-12 text-xs text-slate-500 uppercase tracking-widest">&copy; 2026 All Rights Reserved.</div>
+    <footer class="bg-slate-900 text-slate-500 py-16 text-center text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-white font-bold mb-4">Bluenose Cleaning Pros</p>
+            <p class="mb-2 underline">info@bluenosecleaningpros.com</p>
+            <p>&copy; 2026 Bedford, NS.</p>
         </div>
     </footer>
 
     <script>
         function calculatePrice() {
-            const size = document.getElementById('homeSize').value;
-            document.getElementById('totalPrice').innerText = size;
+            document.getElementById('totalPrice').innerText = document.getElementById('homeSize').value;
         }
+
+        window.onscroll = function() {
+            const bar = document.getElementById('stickyBar');
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                bar.classList.add('visible');
+            } else {
+                bar.classList.remove('visible');
+            }
+        };
     </script>
 </body>
 </html>
