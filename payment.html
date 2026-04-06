@@ -11,20 +11,21 @@
         .step-content { display: none; }
         .step-content.active { display: block; }
         .nav-shadow { box-shadow: 0 2px 15px -3px rgb(0 0 0 / 0.07); }
+        .copy-tooltip { display: none; position: absolute; top: -30px; right: 0; background: #020617; color: white; padding: 4px 8px; border-radius: 6px; font-size: 10px; font-weight: bold; }
     </style>
 </head>
 <body class="bg-slate-50 font-['Inter']">
 
     <nav class="bg-white/95 backdrop-blur sticky top-0 z-50 nav-shadow h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-4 w-full flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="blue-vintage-ship.png" class="h-10" alt="Bluenose Logo">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../blue-vintage-ship.png" class="h-10" alt="Bluenose Logo">
                 <div>
                     <div class="text-lg font-black text-slate-900 leading-none">Bluenose</div>
                     <div class="text-[8px] uppercase tracking-widest text-sky-600 font-bold">Cleaning Pros</div>
                 </div>
             </a>
-            <a href="index.html" class="text-sm font-bold text-sky-600 hover:text-sky-700 transition-colors">← Back to Home</a>
+            <a href="../index.html" class="text-sm font-bold text-sky-600 hover:text-sky-700 transition-colors">← Back</a>
         </div>
     </nav>
 
@@ -33,79 +34,63 @@
             <div class="text-center mb-10">
                 <span class="inline-block px-3 py-1 rounded-full bg-sky-50 text-sky-700 text-[10px] font-black uppercase tracking-widest mb-4">Secure Checkout</span>
                 <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Secure Payment</h1>
-                <p class="text-slate-500 text-sm">Follow the steps below to complete your payment via Interac e-Transfer.</p>
             </div>
 
             <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100">
                 
                 <div id="step1" class="step-content active">
-                    <h2 class="text-xl font-bold mb-6 text-slate-800 italic">1. Payment Details</h2>
+                    <h2 class="text-xl font-bold mb-6 text-slate-800 italic">1. Enter Details</h2>
                     <div class="space-y-5 mb-8">
                         <div>
-                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Your Full Name</label>
-                            <input type="text" id="custName" placeholder="Enter your name" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700 transition-all">
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Your Name</label>
+                            <input type="text" id="custName" placeholder="John Doe" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700">
                         </div>
                         <div>
-                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Amount Due (CAD)</label>
-                            <div class="relative">
-                                <span class="absolute left-4 top-4 font-bold text-slate-400">$</span>
-                                <input type="number" id="payAmount" placeholder="0.00" step="0.01" class="w-full p-4 pl-8 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700 transition-all">
-                            </div>
+                            <label class="block text-[10px] font-black text-slate-400 uppercase mb-2 ml-1">Amount Owed (CAD)</label>
+                            <input type="number" id="payAmount" placeholder="0.00" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 outline-none font-bold text-slate-700">
                         </div>
                     </div>
-                    <button type="button" onclick="showInstructions()" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 transition-all shadow-lg transform active:scale-[0.98]">
-                        Generate Transfer Details →
-                    </button>
+                    <button type="button" onclick="showInstructions()" class="w-full py-4 bg-sky-600 text-white rounded-xl font-bold hover:bg-sky-700 shadow-lg">Generate Transfer Details →</button>
                 </div>
 
                 <div id="step2" class="step-content">
-                    <div class="text-center mb-8">
-                        <div class="bg-slate-900 inline-block p-4 rounded-2xl mb-4">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Interac_e-Transfer_logo.svg/1200px-Interac_e-Transfer_logo.svg.png" class="h-8 mx-auto" alt="Interac">
-                        </div>
-                        <h2 class="text-2xl font-black text-slate-900">Transfer Instructions</h2>
-                    </div>
-
-                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 space-y-4 mb-8">
-                        <div class="flex flex-col border-b border-slate-200 pb-3">
-                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Send Payment To:</span>
-                            <span class="font-bold text-slate-900 text-sm md:text-base">akankshasingh@bluenosecleaningpros.ca</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
-                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest">Total Amount:</span>
-                            <span class="font-black text-sky-600 text-2xl" id="displayAmount">$0.00</span>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Message/Reference:</span>
-                            <span class="font-bold text-slate-900 text-sm" id="displayNote">Cleaning Service</span>
-                        </div>
+                    <div class="text-center mb-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Interac_e-Transfer_logo.svg/1200px-Interac_e-Transfer_logo.svg.png" class="h-6 mx-auto mb-2">
+                        <h2 class="text-xl font-black text-slate-900 uppercase tracking-tight">Payment Instructions</h2>
                     </div>
 
                     <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-sky-100 text-sky-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">1</div>
-                            <p class="text-sm text-slate-600">Open your banking app and select <strong>Interac e-Transfer</strong>.</p>
+                        <div class="relative bg-slate-50 p-4 rounded-2xl border border-slate-200 cursor-pointer hover:border-sky-300 transition-all" onclick="copyText('akankshasingh@bluenosecleaningpros.ca', 'tipEmail')">
+                            <span id="tipEmail" class="copy-tooltip">Copied!</span>
+                            <span class="text-[9px] font-black text-slate-400 uppercase block mb-1">Recipient Email</span>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-slate-900 text-sm">akankshasingh@bluenosecleaningpros.ca</span>
+                                <span class="text-sky-600 text-[10px] font-bold">COPY</span>
+                            </div>
                         </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-sky-100 text-sky-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">2</div>
-                            <p class="text-sm text-slate-600">Enter the email and exact amount shown above.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="bg-emerald-100 text-emerald-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs">✓</div>
-                            <p class="text-sm text-emerald-700 font-medium">Autodeposit is enabled. No security question required.</p>
+
+                        <div class="relative bg-slate-50 p-4 rounded-2xl border border-slate-200 cursor-pointer hover:border-sky-300 transition-all" onclick="copyAmount('tipAmount')">
+                            <span id="tipAmount" class="copy-tooltip">Copied!</span>
+                            <span class="text-[9px] font-black text-slate-400 uppercase block mb-1">Total Amount</span>
+                            <div class="flex justify-between items-center">
+                                <span class="font-black text-sky-600 text-xl" id="displayAmount">$0.00</span>
+                                <span class="text-sky-600 text-[10px] font-bold">COPY</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <button type="button" onclick="location.reload()" class="w-full sm:w-1/3 py-4 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition-colors">Edit</button>
-                        <a href="index.html" class="w-full sm:w-2/3 py-4 bg-slate-900 text-white rounded-xl font-bold text-center hover:bg-black transition-all shadow-lg">Confirm I've Sent It</a>
+                    <div class="bg-emerald-50 p-4 rounded-2xl mb-8 border border-emerald-100">
+                        <p class="text-xs text-emerald-800 font-bold flex items-center gap-2">
+                            ✓ Autodeposit Enabled: No security question needed.
+                        </p>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button onclick="location.reload()" class="flex-1 py-4 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm">Edit</button>
+                        <a href="../index.html" class="flex-[2] py-4 bg-slate-900 text-white rounded-xl font-bold text-sm text-center">I've Sent the Transfer</a>
                     </div>
                 </div>
             </div>
-            
-            <p class="mt-8 text-center text-slate-400 text-[10px] uppercase tracking-[0.2em]">
-                &copy; 2026 Bluenose Cleaning Pros | Bedford, NS
-            </p>
         </div>
     </section>
 
@@ -113,18 +98,25 @@
         function showInstructions() {
             const amount = document.getElementById('payAmount').value;
             const name = document.getElementById('custName').value;
-
-            if(!amount || !name) {
-                alert("Please enter both your name and the amount due.");
-                return;
-            }
-
+            if(!amount || !name) { alert("Enter name and amount"); return; }
             document.getElementById('displayAmount').innerText = "$" + parseFloat(amount).toFixed(2);
-            document.getElementById('displayNote').innerText = "Cleaning: " + name;
-            
             document.getElementById('step1').classList.remove('active');
             document.getElementById('step2').classList.add('active');
-            window.scrollTo(0, 0);
+        }
+
+        function copyText(text, tooltipId) {
+            navigator.clipboard.writeText(text);
+            const tip = document.getElementById(tooltipId);
+            tip.style.display = 'block';
+            setTimeout(() => { tip.style.display = 'none'; }, 2000);
+        }
+
+        function copyAmount(tooltipId) {
+            const amt = document.getElementById('displayAmount').innerText.replace('$', '');
+            navigator.clipboard.writeText(amt);
+            const tip = document.getElementById(tooltipId);
+            tip.style.display = 'block';
+            setTimeout(() => { tip.style.display = 'none'; }, 2000);
         }
     </script>
 </body>
